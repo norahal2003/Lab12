@@ -1,10 +1,5 @@
-% ============================================================
-%  Lab 12 - Task 1 : Finding a path between cities
-%  Run:   swipl lab12.pl
-%  Query: ?- travel('Makkah','Riyadh',P).   (press ; for more paths)
-% ============================================================
 
-% ---------- Graph: road(From, To) = one-way arrow in the figure ----------
+%  Graph: road(From, To) = one-way arrow in the figure 
 road('Makkah',  'Madinah').
 road('Makkah',  'Riyadh').
 
@@ -25,7 +20,7 @@ road('Riyadh',  'Dammam').
 road('Qatif',   'Madinah').
 road('Qatif',   'Dammam').
 
-% ---------- travel(Start, End, Path) ----------
+%  travel(Start, End, Path) 
 % Path is the list of cities from Start to End, with no city repeated.
 travel(Start, End, Path) :-
     path(Start, End, [Start], RevPath),
